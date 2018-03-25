@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<div th:replace="layout :: header"></div>
+<div th:replace="layout :: nav"></div>
+<div th:replace="layout :: flash"></div>
+<section>
+    <div class="container wrapper">
+        <div class="project-list single">
+            <div class="project">
+                <h2 th:text="${project.name}">Project Name</h2>
+                <p th:text="${project.description}">Project Description</p>
+                <span class="tag active" th:text="${project.status}">Active</span>
+            </div>
+            <div class="roles-collaborators">
+                <h3 th:text="${heading}">Roles &amp; Collaborators</h3>
+                <div th:if="${project.rolesNeeded.size() == 0}">
+                    <p>There are no roles for this project.</p>
+                </div>
+                <div th:if="${project.rolesNeeded.size() !=0 and project.collaborators.size() == 0}">
+                    <div class="list-item" th:each="role : ${project.rolesNeeded}">
+                        <span class="primary" th:text="${role.name}">Role</span>
+                        <span class="secondary">No Collaborator</span>
+                    </div>
+                </div>
+                <div th:if="${project.collaborators.size() != 0}">
+                    <div class="list-item" th:each="collaborator : ${project.collaborators}">
+                        <span class="primary" th:text="${collaborator.role.name}">Role</span>
+                        <span class="secondary" th:text="${collaborator.name}">Collaborator</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="button" th:href="'/project/' + ${project.id} + '/edit'">Edit Project</a>
+                    <a class="button" th:href="'/project/' + ${project.id} + '/edit-collaborators'">Edit
+                        Collaborators</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
