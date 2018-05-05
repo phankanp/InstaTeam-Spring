@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<div th:replace="layout :: header"></div>
+<div th:replace="layout :: nav"></div>
+<section>
+    <div class="container wrapper">
+        <form th:action="@{${action}}" method="post" th:object="${project}">
+            <input type="hidden" th:field="*{id}"/>
+            <label th:text="${heading}">Edit Collaborators</label>
+            <ul class="checkbox-list">
+                <li th:each="role : *{rolesNeeded}">
+                    <span class="primary" th:text="${role.name}">Developer</span>
+                    <div class="custom-select">
+                        <span class="dropdown-arrow"></span>
+                        <select th:field="*{collaborators}">
+                            <option th:each="collaborator : ${role.collaborators}" th:value="${collaborator.id}"
+                                    th:text="${collaborator.name}">Collaborator Name
+                            </option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <div class="actions">
+                <input type="submit" value="Save" class="button"/>
+                <a th:href="${cancel}" class="button button-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

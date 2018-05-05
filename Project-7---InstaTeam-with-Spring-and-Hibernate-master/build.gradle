@@ -27,8 +27,6 @@ dependencies {
     compile group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.0.7.Final'
     compile 'org.hashids:hashids:1.0.1'
     compile group: 'org.springframework', name: 'spring-orm', version: '4.3.14.RELEASE'
-    compile group: 'org.springframework', name: 'spring-web', version: '4.3.14.RELEASE'
-    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.14.RELEASE'
     compile group: 'org.apache.tomcat', name: 'tomcat-dbcp', version: '9.0.6'
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.13.Final'
     compile group: 'javax.transaction', name: 'jta', version: '1.1'
