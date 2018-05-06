@@ -1,4 +1,4 @@
-A project management software.This application uses Spring boot, Hibernate, Apache DBCP, and H2 database to create a Java web application. The application lets users create projects, add roles to a project (e.g. developer or designer), assign collaborators, and manage the project.
+A project management software. This application uses Spring boot, Hibernate, Apache DBCP, and H2 database to create a Java web application. The application lets users create projects, add roles to a project (e.g. developer or designer), assign collaborators, and manage the project.
 
 # Steps
 
