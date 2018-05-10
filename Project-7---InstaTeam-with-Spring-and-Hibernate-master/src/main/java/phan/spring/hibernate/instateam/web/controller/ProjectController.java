@@ -142,7 +142,7 @@ public class ProjectController {
         model.addAttribute("availableCollaborators", availableCollaborators);
         model.addAttribute("heading", "Edit Collaborators");
         model.addAttribute("save", "update");
-        model.addAttribute("cancel", String.format("/project_detail/%s", projectId));
+        model.addAttribute("cancel", String.format("/project/%s", projectId));
 
         return "project/project_collaborators";
     }

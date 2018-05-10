@@ -38,6 +38,7 @@ public class CollaboratorController {
         model.addAttribute("action", "/collaborators/add");
         model.addAttribute("collaborators", collaborators);
         model.addAttribute("heading", "Manage Collaborators");
+        model.addAttribute("pre", "None");
         model.addAttribute("roles", roles);
         model.addAttribute("submit", "Add");
 
@@ -50,7 +51,7 @@ public class CollaboratorController {
         if (result.hasErrors()) {
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.collaborator", result);
             redirectAttributes.addFlashAttribute("collaborator", collaborator);
-            redirectAttributes.addFlashAttribute("flash", new FlashMessage("Invalid Input!",
+            redirectAttributes.addFlashAttribute("flash", new FlashMessage("Invalid Input! Collaborator must have a role.",
                     FlashMessage.Status.FAILURE));
             return "redirect:/collaborators";
         }
