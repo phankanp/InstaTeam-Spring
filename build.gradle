@@ -13,7 +13,7 @@ sourceCompatibility = 1.8
 apply plugin: 'java'
 
 jar {
-    baseName = 'InstaTeam'
+    baseName = 'instateam'
     version '1.0-SNAPSHOT'
 }
 

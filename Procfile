@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar build/libs/InstaTeam-1.0-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar build/libs/instateam-1.0-SNAPSHOT.jar
