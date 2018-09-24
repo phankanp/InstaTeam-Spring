@@ -1,5 +1,7 @@
 A project management software. This application uses Spring boot, Hibernate, Apache DBCP, and H2 database to create a Java web application. The application lets users create projects, add roles to a project (e.g. developer or designer), assign collaborators, and manage the project.
 
+**Deployed to Heroku** : https://secure-harbor-39058.herokuapp.com/
+
 # Steps
 
 - Create a Gradle project. Add dependencies for Spring Boot with Thymeleaf, Spring ORM, Hibernate, Apache DBCP, and H2. Create the directory and package structure of the application. Save all static assets into the proper project directory.
