@@ -40,7 +40,7 @@ public class DataConfig {
         ds.setUrl(env.getProperty("instateam.db.url"));
 
         // Set username & password
-        ds.setUsername(env.getProperty("instateam.db.uesrname"));
+        ds.setUsername(env.getProperty("instateam.db.username"));
         ds.setPassword(env.getProperty("instateam.db.password"));
 
         return ds;
